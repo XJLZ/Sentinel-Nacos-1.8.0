@@ -1,2 +1,3 @@
 lol.......
 Sentinel规则持久化-Nacos
+启动命令，java -jar sentinel-dashboard.jar --nacos.url=127.0.0.1 --nacos.port=8848
