@@ -34,9 +34,7 @@ import java.util.List;
 public class NacosConfig {
 
     @Value("${nacos.url}")
-    private String url;
-    @Value(("${nacos.port}"))
-    private String port;
+    private String serverAddr;
 
     @Bean
     public Converter<List<FlowRuleEntity>, String> flowRuleEntityEncoder() {
@@ -90,6 +88,6 @@ public class NacosConfig {
 
     @Bean
     public ConfigService nacosConfigService() throws Exception {
-        return ConfigFactory.createConfigService(url + ":" + port);
+        return ConfigFactory.createConfigService(serverAddr);
     }
 }
